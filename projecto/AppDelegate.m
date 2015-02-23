@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewA.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+
+    
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:[ViewA new]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // não quero que a navigationbar seja visivel
+    
+    [nav setNavigationBarHidden:YES];
+    
+    
+    [self.window makeKeyAndVisible];
+    
+    [self.window setRootViewController:nav];
+    
     return YES;
 }
 

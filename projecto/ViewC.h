@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewC.h
 //  projecto
 //
 //  Created by Hugo Costa on 23/02/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewC : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)back:(id)sender;
 
 @end
-
